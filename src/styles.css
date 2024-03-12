@@ -1,37 +1,88 @@
 
+@font-face {
+  font-family: 'Bonita';
+  src: url('./fonts/BONITA.ttf') format('truetype');
+  /* Puedes agregar otros formatos de fuente aquí si es necesario para compatibilidad con navegadores */
+}
 
 html, body {
-    background-color: #344e62;
-    color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.3rem;
-    padding: 70px;
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/fondo.jpg');
+  background-color: rgb(239, 206, 166);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  font-family: 'Bonita', cursive;
+  font-size: 1.2rem;
+  color: rgba(4, 4, 4, 0.992);
+  min-height: 100vh;
 }
 
 .search-container {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  align-self: flex-start;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #1b7051;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 300px;
+  outline: none;
+  font-family: 'Bonita', cursive;
+}
+
+input:focus {
+  border-color:#1b846b;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Bonita', cursive;
+  background-color: #067158;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+
+button:hover {
+  background-color: #196e48c0;
+}
+
+/* Media queries para hacer la página responsive */
+@media only screen and (max-width: 760px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
     align-items: center;
-    margin: 20px;
+    align-content: center;
   }
-  
+
+  h1 {
+    font-size: 2.0rem;
+  }
+
   input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 40%;
     margin-right: 10px;
+    margin-bottom: 10px;
   }
-  
+
   button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 40%;    
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+}
