@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM  from 'react-dom/client';
-import { WelcomeApp } from './WeddingApp';
-import './styles.css'
-
+import WeddingApp from './components/WeddingApp';
 
 const rootElement = document.getElementById('root')
 
 if(rootElement){
     ReactDOM.createRoot(rootElement).render(
         <React.StrictMode>
-            <WelcomeApp/>
+            <WeddingApp/>            
         </React.StrictMode>
     )
 }else{
